@@ -2,7 +2,7 @@ import express, { application } from "express";
 
 const app = express();
 
-const port = 5000;
+const port = process.env.port || 5000;
 
 // http methods 
 // get,post,put,delete
@@ -36,11 +36,33 @@ app.listen(port,() => {
  app.get("/register", (req,res) => {
    try {
     console.clear()
-    res.send("REGISTER PAGE");
+    res.send("1st REGISTER PAGE");
    } catch (error) {
     console.log(error);
    }
  })
+
+ app.get("/register", (req,res) => {
+    try {
+     console.clear()
+     res.send("2ND REGISTER PAGE");
+    } catch (error) {
+     console.log(error);
+    }
+  })
+
+  // express follows top to bottom order. so it shows output for the first /register i.e 1st register page.
+
+  // res.send supports ==> strings and html format
+
+  app.get("/register", (req,res) => {
+    try {
+     console.clear()
+     res.send(<h1>Login Page</h1>);
+    } catch (error) {
+     console.log(error);
+    }
+  })
  app.listen(port, ()  => {
     console.log("server is started and register page is running");
  })
