@@ -1,0 +1,24 @@
+Express JS
+
+Express is a minimal and flexible Node.js web application framework that helps you quickly create web servers and APIs.
+
+// 
+Why use Express?
+1. Easy to set up.
+2. Handles routing easily (GET, POST, etc.).
+3. Middleware support (to add functionality between request and response).
+4. Used in almost every Node.js backend project.
+
+// How to Install Express
+1. Make sure you check you have nodejs installed 
+2. node -v 
+3. npm -v
+4. make sure you have cloned the repo 
+5. cd repo 
+6. npm init -y or npm init 
+7. npm install express     // 
+// NPM ==> Node Package Manager 
+8. add .gitignore .env
+9. add type module and script start : "node app.js"
+10.npm install dotenv
+11. touch app.js 
